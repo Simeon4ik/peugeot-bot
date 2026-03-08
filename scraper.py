@@ -39,7 +39,7 @@ def send_email(new_ads):
     msg.set_content("\n".join(new_ads))
     msg['Subject'] = f"Нови обяви Peugeot 2008 (4 сайта)"
     msg['From'] = os.environ['YAHOO_USER']
-    msg['To'] = os.environ['YAHOO_USER']
+    msg['To'] = "simeon.d.ralchev@gmail.com"
 
     with smtplib.SMTP_SSL('smtp.mail.yahoo.com', 465) as smtp:
         smtp.login(os.environ['YAHOO_USER'], os.environ['YAHOO_PASS'])
